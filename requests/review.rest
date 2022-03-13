@@ -1,0 +1,12 @@
+@BASE_URL = http://localhost:5500/review/61cabcecb95707d20244cc22
+@TOKEN = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWM1NmQ5ZjE2YzRhZWViN2Q3ZTgwOTAiLCJpYXQiOjE2NDAzNDM3MTN9.q_U2MATXqdr7r9DGFH-wvpYdFBHn4lyL_pyNDJejEWI
+
+# Add Review
+POST {{BASE_URL}}
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+{
+    "review": "Hello world",
+    "rating": 5
+}

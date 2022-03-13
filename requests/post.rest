@@ -1,0 +1,35 @@
+@BASE_URL = http://localhost:5500/post
+@TOKEN = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYxMWE3NmI4ZmRhZDAwMWI1NGRhZWYiLCJpYXQiOjE2NDMxOTEwMjZ9.Ns3X0tzfbnzN5PKxWrubomkmcxXT2Tpx0v1G8WYiFp0
+
+# GET POST
+GET {{BASE_URL}}
+
+# Add Post
+POST {{BASE_URL}}
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+{
+    "status": "Hello world"
+}
+
+###
+
+# Add Post to Archive
+POST {{BASE_URL}}/archivePost/61e6bff3e5805b8728bb70ee
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+###
+
+# Delete Post
+DELETE {{BASE_URL}}/deletePost/61f12120589e276e320623a2
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+###
+
+# Get Archive Post
+GET {{BASE_URL}}/archive
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
